@@ -19,7 +19,6 @@ module TzWeb
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**/**.yml').to_s]
     config.i18n.default_locale = :'zh-CN'
     config.i18n.available_locales = [:'zh-CN', :en, :zh, :'en-US']
-    config.i18n.fallbacks = { :'zh-CN' => :'zh' } # for i18n-countries-translations
-    
+    config.i18n.fallbacks = { :'zh-CN' => :zh } # for i18n-countries-translations
   end
 end

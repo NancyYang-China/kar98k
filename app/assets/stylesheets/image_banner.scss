@@ -1,0 +1,87 @@
+@import 'mixins';
+
+.banner {
+  position: relative;
+  min-width: 1200px;
+  width: 100%;
+  .full-width {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+  }
+  .banner-image {
+    display: flex;
+  }
+  .mobile-banner-image {
+    display: none;
+  }
+  #banner-tag {
+    position: absolute;
+    height: 55px;
+    left: 0px;
+    bottom: 6px;
+    z-index: 1;
+    color: #ffffff;
+    font-size: 38px;
+    line-height: 41px;
+    opacity: 0;
+    animation: banner-tag 2s forwards;
+    animation-delay: 0.8s;
+  }
+  @keyframes banner-tag {
+    100% { left: 144px; opacity: 1 }
+  }
+  #line {
+    position: absolute;
+    width: 0%;
+    height: 5px;
+    left: 0px;
+    bottom: 0px;
+    background-color: #ab1e11;
+    border-color: #dd191d;
+    border-width: 1px;
+    border-style: solid;
+    opacity: 0.7;
+    z-index: 1;
+    animation: line 2s forwards;
+    animation-delay: 0.8s;
+    animation-iteration-count: 1;
+  }
+  @keyframes line {
+    100% { width: 100% }
+  }
+}
+
+@include respond-to(mobile) {
+  .banner {
+    min-width: 0px;
+    .full-width {
+      height: 200px;
+    }
+    .banner-image {
+      display: none;
+    }
+    .mobile-banner-image {
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-size: cover;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -ms-background-size: cover;
+      -o-background-size: cover;
+    }
+    #banner-tag {
+      position: absolute;
+      height: 40px;
+      font-size: 24px;
+      line-height: 33px;
+    }
+    @keyframes banner-tag {
+      100% { left: 16%; opacity: 1 }
+    }
+    #line {
+      height: 3px;
+      bottom: 2px;
+    }
+  } 
+}

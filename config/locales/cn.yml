@@ -16,18 +16,67 @@
 #
 # This would use the information in config/locales/es.yml.
 #
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello world"
+zh-CN:
+  copyright: '版权声明  Copyright@ 田子创意2018'
+  tz: 'TZ'
+  created_at: '创建时间'
+  updated_at: '最后修改时间'
+
+  admin:
+    actions:
+      nestable:
+        menu: "排序"
+        breadcrumb: "排序"
+        title: "投资组合排序"
+        live_update: "实时更新"
+        update: "更新"
+        success: "成功"
+        failure: "失败"
+
+  activerecord:
+    models:
+      creative_category: '创意类别'
+      info: "我们"
+      partner: "合作伙伴"
+      project: "产品创意"
+      recruitment: "职位招聘"
+    attributes:
+      info:
+        title: "标题"
+        description: "详情"
+        asset: "图片"
+      partner:
+        name: "名称"
+        logo: "标志"
+        website: "网址"
+        description: "详情"
+        position: "位置"
+      creative_category:
+        name: '名称'
+        position: '位置'
+      banner:
+        image: "banner"
+        position: '位置'
+      project:
+        name: "名称"
+        logo: "标志"
+        description: "简述"
+        position: "位置"
+        creative_category: "创意类别"
+        image1: "图标1"
+        image2: "图标2"
+        image3: "图标3"
+        image4: "图标4"
+        image5: "图标5"
+        challenge: "挑战"
+        result: "解决方案"
+        summary: "总结"
+      recruitment:
+        title: "职位"
+        count: "数量"
+        description: "工作内容"
+        requirement: "期待"
+        position: "位置"

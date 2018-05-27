@@ -1,8 +1,7 @@
 RailsAdmin.config do |config|
-
   # config.main_app_name = ["TZ app", "BackOffice"]
   # or something more dynamic
-  config.main_app_name = Proc.new { |controller| [ "TZ app", "BackOffice - #{controller.params[:action].try(:titleize)}" ] }
+  config.main_app_name = proc { |controller| ['TZ app', "BackOffice - #{controller.params[:action].try(:titleize)}"] }
 
   ### Popular gems integration
 
@@ -37,6 +36,9 @@ RailsAdmin.config do |config|
     edit
     delete
     show_in_app
+
+    # Add the nestable action for configured models
+    nestable
 
     ## With an audit adapter, you can add:
     # history_index

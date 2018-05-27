@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  devise_for :users #, path: 'auth', path_names: { sign_in: 'login', sign_out: 'logout', password: 'secret', confirmation: 'verification', unlock: 'unblock', registration: 'register', sign_up: 'cmon_let_me_in' }
+  devise_for :users
 
   root to: 'home#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  get :works, to: 'home#works', as: :works
+  get :about_us, to: 'home#about_us', as: :about_us
+  get :contact_us, to: 'contact_us#index', as: :contact_us
+  get :recruitment, to: 'recruitment#index', as: :recruitment
 end

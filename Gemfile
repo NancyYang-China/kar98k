@@ -26,6 +26,7 @@ gem 'coffee-rails', '~> 4.2'
 # let your Gemfile do the configuring (http://github.com/indirect/haml-rails)
 gem 'haml-rails'
 # Integrate React.js with Rails views and controllers, the asset pipeline, or webpacker.
+# gem 'webpacker'
 gem 'react-rails'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -86,6 +87,7 @@ group :development do
   gem 'capistrano-rails', '~> 1.2'
   # Add this if you're using rbenv
   gem 'capistrano-rbenv', '~> 2.1'
+  gem 'annotate'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

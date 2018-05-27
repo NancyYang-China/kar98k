@@ -1,0 +1,339 @@
+@import 'mixins';
+
+.about_us {
+  background: #f0f0f2;
+  min-width: 1480px;
+  height: auto;
+  .about-us-menu {
+    width: 100%;
+    height: 130px;
+    padding: 20px;
+    background: #fff;
+    .menu-item {
+      margin: 40px;
+      font-size: 25px;
+      color: #000;
+      text-decoration: none;
+      white-space: pre-wrap;
+    }
+    a:hover {
+      color: #a80309;
+    }
+  }
+  .about-us-items {
+    width: 1480px;
+    .item-s {
+      color: #888;
+      font-size: 33px;
+    }
+    .item-title {
+      color: #5c5c5c;
+      font-size: 30px;
+      margin-left: 20px;
+      white-space: pre-wrap;
+    }
+    .item-card {
+      margin-left: 144px;
+      margin-right: 112px;
+      padding-top: 94px;
+      margin-top: -48px;
+      .item-content {
+        justify-content: space-between;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        .content {
+          color: #5c5c5c;
+          min-width: 476px;
+          height: auto;
+          font-size: 20px;
+          line-height: 41px;
+          margin-left: 18px;
+          margin-right: 54px;
+          white-space: pre-wrap;
+        }
+        .asset {
+          display: inline-block;
+          width: 396px;
+          height: 246px;
+          object-fit: cover;
+        }
+      }
+      animation: item-card 0s forwards;
+      animation-delay: .1s;
+    }
+    @keyframes item-card {
+      100% { margin-top: -48px }
+    }
+    .partner-item {
+      padding-top: 102px;
+      margin-top: -48px;
+      min-width: 944px;
+      margin-left: 144px;
+      margin-right: 112px;
+      margin-bottom: 80px;
+      .list {
+        margin-top: 5px;
+        width: 100%;
+        position: relative;
+        .empty-item {
+          // min-width: 304px;
+          // min-height: 152px;
+          // width: calc(33.33% - 10px);
+          // height: 16.66vw;
+          width: 398px;
+          height: 199px;
+          margin: 5px;
+        }
+        .item {
+          // min-width: 304px;;
+          // min-height: 152px;
+          // width: calc(33.33% - 10px);
+          // height: 16.66vw;
+          width: 398px;
+          height: 199px;
+          position: relative;
+          background: #fff;
+          margin: 5px;
+          cursor: pointer;
+          img {
+            max-width: 180px;
+            max-height: 90px;
+            width: auto;
+            height: auto;
+            display: block;
+            object-fit: contain;
+          }
+          p {
+            width: 100%;
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            text-align: center;
+            color: #757575;
+          }
+        }
+      }
+    }
+  }
+  .modal {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 4; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 800px;
+  }
+  /* The Close Button */
+  .close {
+      color: #aaaaaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+  }
+  .partner-view {
+    padding: 60px;
+    .top-view {
+      margin-bottom: 60px;
+      justify-content: space-between;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      -ms-justify-content: space-between;
+      -o-justify-content: space-between;
+      .partner-model-logo {
+        max-width: 240px;
+        max-height: 120px;
+        width: auto;
+        height: auto;
+      }
+      .web {
+        color: #525252;
+        font-size: 23px;
+      }
+    }
+    .content-view {
+      .content-header {
+        .v-line {
+          color: #a80309;
+          font-size: 33px;
+        }
+        .title {
+          color: #525252;
+          font-size: 30px;
+          margin-left: 18px;
+        }
+      }
+      .description {
+        color: #525252;
+        font-size: 20px;
+        margin-left: 16px;
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+@include respond-to(mobile) {
+  .about_us {
+    min-width: 0px;
+    .about-us-menu {
+      width: 100%;
+      height: 40px;
+      padding: 0px 16px 0px 16px;
+      justify-content: space-between;
+      -webkit-justify-content: space-between;
+      -moz-justify-content: space-between;
+      -ms-justify-content: space-between;
+      -o-justify-content: space-between;
+      .menu-item {
+        margin: 0px;
+        font-size: 12px;
+        line-height: 17px;
+      }
+    }
+    .about-us-items {
+      width: 100%;
+      .item-s {
+        font-size: 17px;
+      }
+      .item-title {
+        font-size: 15px;
+        margin-left: 6px;
+      }
+      .item-card {
+        margin-left: 16px;
+        margin-right: 16px;
+        padding-top: 60px;
+        margin-top: -48px;
+        .item-content {
+          flex-direction: column;
+          -webkit-flex-direction: column;
+          -moz-flex-direction: column;
+          -ms-flex-direction: column;
+          -o-flex-direction: column;
+          .content {
+            min-width: 0px;
+            font-size: 11px;
+            line-height: 21px;
+            margin-left: 0px;
+            margin-right: 0px;
+            -webkit-box-flex: none;      /* OLD - iOS 6-, Safari 3.1-6 */
+            -moz-box-flex: none;         /* OLD - Firefox 19- */
+            -webkit-flex: none;          /* Chrome */
+            -ms-flex: none;              /* IE 10 */
+            flex: none;    
+          }
+          .asset {
+            width: 100%;
+            height: 62.12vw;
+          }
+        }
+      }
+      .partner-item {
+        min-width: 0px;
+        margin-left: 16px;
+        margin-right: 16px;
+        padding-top: 60px;
+        margin-top: -48px;
+        margin-bottom: 18px;
+        .list {
+          margin-top: 5px;
+          width: 100%;
+          position: relative;
+          .empty-item {
+            width: calc(50% - 6px);
+            height: 30vw;
+            margin: 3px;
+          }
+          .item {
+            width: calc(50% - 6px);
+            height: 30vw;
+            margin: 3px;
+            img {
+              width: 80%;
+              height: 50vw;
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+
+    /* Modal Content */
+    .modal-content {
+      background-color: #fff;
+      margin: auto;
+      padding: 0px;
+      width: 88%;
+    }
+    /* The Close Button */
+    .close {
+        color: #000;
+    }
+    .partner-view {
+      padding: 12px;
+      .top-view {
+        margin-bottom: 18px;
+        flex-direction: column;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        -ms-flex-direction: column;
+        -o-flex-direction: column;
+        align-items: center;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        -o-align-items: center;
+        .partner-model-logo {
+          max-width: 60%;
+          max-height: 30vw;
+        }
+        .web {
+          color: #525252;
+          font-size: 14px;
+        }
+      }
+      .content-view {
+        .content-header {
+          .v-line {
+            color: #a80309;
+            margin-left: 16px;
+            font-size: 28px;
+          }
+          .title {
+            font-size: 18px;
+            margin-left: 12px;
+          }
+        }
+        .description {
+          font-size: 12px;
+          line-height: 17px;
+          margin-left: 16px;
+          margin-top: 16px;
+        }
+      }
+    }
+  }
+}
