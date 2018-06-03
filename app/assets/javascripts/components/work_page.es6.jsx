@@ -10,7 +10,7 @@ class WorkPage extends BasePage {
   }
 
   _path() {
-    return "/works"
+    return "/project"
   }
 
   _renderMenuItem(item) {
@@ -47,12 +47,16 @@ class WorkPage extends BasePage {
     const projectsView = projects.filter(project=> {
       return (filterType === -1) ? true :
         project.creative_category_id == filterType
-    }).map(project=> {
+    }).map((project, index)=> {
       return (
-        <div id="project-item" className="flex-h flex-vc flex-hc" key={project.id} onClick={()=> this.setState({project})}>
-          <img src={project.logo.url} />
-          <p>{project.description}</p>
-        </div>
+        <a href={`/project/${project.id}`} key={index}>
+          <div id="project-item"
+            className="flex-h flex-vc flex-hc"
+            key={project.id}>
+            <img src={project.logo.url} />
+            <p>{project.description}</p>
+          </div>
+        </a>
       )
     })
 
@@ -104,8 +108,8 @@ class WorkPage extends BasePage {
         <ImageBanner tag="ALL PROJECTS" src="assets/images/project_badge.jpeg" />
         {this._renderMenu()}
         {this._renderlist()}
-        {this._renderModal()}
       </div>
+      // {this._renderModal()}
     )
   }
 }

@@ -6,7 +6,7 @@ class HeaderBar extends React.Component {
     }
 
     this.menus = [{
-      path: '/works',
+      path: '/project',
       name: '工作'
     }, {
       path: '/about_us',
