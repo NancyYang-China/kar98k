@@ -57,3 +57,4 @@ config/secrets.yml
 /node_modules
 yarn-debug.log*
 .yarn-integrity
+config/database.yml\nconfig/secrets.yml
