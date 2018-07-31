@@ -16,18 +16,20 @@
 #
 # This would use the information in config/locales/es.yml.
 #
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  copyright: '版权声明  Copyright@ 田子创意2018'
+  tz: 'TZ'
+  created_at: 'Created at'
+  updated_at: 'Updated at'
+
+  activerecord:
+    models:
+      creative_category: 'Creative Category'
+    attributes:
+      creative_category:
+        name: 'Name'
+      banner:
+        image: "Banner"

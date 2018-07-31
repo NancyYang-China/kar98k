@@ -80,5 +80,5 @@ test:
 production:
   <<: *default
   database: tz_production
-  username: tz
+  username: deploy
   password:

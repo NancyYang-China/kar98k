@@ -52,3 +52,9 @@ public/uploads/
 
 config/database.yml
 config/secrets.yml
+/public/packs
+/public/packs-test
+/node_modules
+yarn-debug.log*
+.yarn-integrity
+config/database.yml\nconfig/secrets.yml

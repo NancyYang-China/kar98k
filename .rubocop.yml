@@ -60,6 +60,7 @@ Style/Documentation:
     - 'app/mailers/application_mailer.rb'
     - 'app/models/application_record.rb'
     - 'config/application.rb'
+  Enabled: false
 
 # Offense count: 6
 # Cop supports --auto-correct.
@@ -123,4 +124,13 @@ Style/SymbolArray:
 # Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
 # URISchemes: http, https
 Metrics/LineLength:
-  Max: 130
+  Max: 160
+
+Style/StringLiteralsInInterpolation:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 200
+
+Metrics/BlockLength:
+  Max: 40
