@@ -1,3 +1,4 @@
+require 'carrierwave/processing/mini_magick'
 class BannerUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick

@@ -1,3 +1,4 @@
+require 'carrierwave/processing/mini_magick'
 class LogoUploader < CarrierWave::Uploader::Base
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
