@@ -7,13 +7,13 @@ class HeaderBar extends React.Component {
 
     this.menus = [{
       path: '/project',
-      name: '工作'
+      name: '工作/work'
     }, {
       path: '/about_us',
-      name: '我们'
+      name: '我们/about'
     }, {
       path: '/contact_us',
-      name: '联系'
+      name: '联系/contact'
     }]
   }
 
@@ -67,7 +67,7 @@ class HeaderBar extends React.Component {
         <div className='forground'/>
         <div className='menu-content'>
           <a className='nav-logo' href='/' target="_self">
-            <img className='nav-logo' src={`assets/images/logo.png`}/>
+            <img className='nav-logo' src={`/assets/images/logo.png`}/>
           </a>
           <div className='menu-bar'>
             {menusView}

@@ -1,0 +1,61 @@
+@import 'mixins';
+
+.project-show {
+  background: white;
+  min-width: 1200px;
+  height: auto;
+  padding-top: 60px;
+  .header {
+    width: 100%;
+    height: auto;
+    padding: 122px;
+    .header-left {
+      width: 40%;
+      .project-name {
+        font-size: 36px;
+        line-height: 52px;
+        line-width: 8px;
+        color: #101010;
+      }
+      .project-name::after {
+        content: "|";
+        color: #DEDEE4;
+        margin-left: 24px;
+      }
+      .project-type {
+        font-size: 14px;
+        color: #757575;
+        line-height: 20px;
+      }
+    }
+    .header-right {
+      margin-left: 100px;
+      font-size: 20px;
+      color: #757575;
+      white-space: pre-line;
+      line-height: 29px;
+    }
+  }
+  .images-container {
+    width: 100%;
+    height: auto;
+    padding: 122px;
+    .image-left {
+      margin-right: 12px;
+      margin-top: 24px;
+    }
+    .image-right {
+      margin-left: 12px;
+      margin-top: 24px;
+    }
+  }
+}
+
+@include respond-to(mobile) {
+  .project-show {
+    min-width: 0px;
+    .full-width {
+      display: none;
+    }
+  }
+}

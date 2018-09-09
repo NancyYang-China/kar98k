@@ -51,6 +51,23 @@
     space-around    等间距排列，首尾留白
    */
 }
+/* 父元素-水平居中（主轴是横向才生效） */
+.flex-space-between {
+  /* 09版 */
+  -webkit-box-pack: space-between;
+  /* 12版 */
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  /* 其它取值如下：
+    align-items     主轴原点方向对齐
+    flex-end        主轴延伸方向对齐
+    space-between   等间距排列，首尾不留白
+    space-around    等间距排列，首尾留白
+   */
+}
 /* 父元素-纵向排列（主轴） */
 .flex-v {
   display: box;              /* OLD - Android 4.4- */
