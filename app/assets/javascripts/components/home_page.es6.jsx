@@ -72,7 +72,7 @@ class HomePage extends BasePage {
           <img src={show.image3.url}/>
         </div>
         <div className="flex-v" style={{marginRight: 10}}>
-          <img src={show.image4.url} style={{marginBottom: 10}}/>
+          <img src={show.image2.url} style={{marginBottom: 10}}/>
           <img src={show.image4.url}/>
         </div>
         <img src={show.image5.url}/>

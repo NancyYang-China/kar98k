@@ -10,20 +10,30 @@ class SlideBanner extends React.Component {
     );
   }
 
+  _renderCarouselIndicators(banners) {
+    var indicators = banners.map((banner, index) => {
+      return <li data-target="#myCarousel" data-slide-to={index}/>
+    })
+    indicators[0] = <li data-target="#myCarousel" data-slide-to="0" className="active"/>
+
+    return (
+      <ol className="carousel-indicators">
+        {indicators}
+      </ol>
+    )
+  }
+
   render() {
-    const bannersView = this.props.banners.map((banner, index)=> {
+    const { banners } = this.props;
+
+    const bannersView = banners.map((banner, index)=> {
       return this._renderBanner(banner, index)
     })
 
     return (
       <div id="myCarousel" className="carousel slide"
            data-ride="carousel" data-interval={8000} data-pause={false}>
-        <ol className="carousel-indicators">
-          <li data-target="#myCarousel" data-slide-to="0" className="active" />
-          <li data-target="#myCarousel" data-slide-to="1" />
-          <li data-target="#myCarousel" data-slide-to="2" />
-          <li data-target="#myCarousel" data-slide-to="3" />
-        </ol>
+        {this._renderCarouselIndicators(banners)}
         <div className="carousel-inner">
           {bannersView}
         </div>

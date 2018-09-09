@@ -18,15 +18,15 @@ class Project < ApplicationRecord
       field :description, :text do
         html_attributes maxlength: 80, rows: 2, cols: 40
       end
-      field :challenge, :text do
-        html_attributes maxlength: 160, rows: 4, cols: 40
-      end
-      field :result, :text do
-        html_attributes maxlength: 160, rows: 4, cols: 40
-      end
-      field :summary, :text do
-        html_attributes maxlength: 160, rows: 4, cols: 40
-      end
+      # field :challenge, :text do
+      #   html_attributes maxlength: 160, rows: 4, cols: 40
+      # end
+      # field :result, :text do
+      #   html_attributes maxlength: 160, rows: 4, cols: 40
+      # end
+      # field :summary, :text do
+      #   html_attributes maxlength: 160, rows: 4, cols: 40
+      # end
       field :creative_category
       field :image1
       field :image2
