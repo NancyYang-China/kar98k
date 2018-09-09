@@ -1,16 +1,15 @@
 @import 'mixins';
 
-// .carousel-inner {
-//   width: 100%;
-//   min-width: 1200px;
-//   min-height: 625px;
-//   height: auto;
-//   position: relative;
-// }
-//
-// @include respond-to(mobile) {
-//   .carousel-inner {
-//     min-width: 0px;
-//     min-height: 0px;
-//   }
-// }
+.product-shows {
+  margin-left: 40px;
+  margin-right: 40px;
+  .show-item {
+    margin-top: 40px;
+    p {
+      color: #101010;
+      font-size: 20px;
+      line-height: 29px;
+      margin-bottom: 6px;
+    }
+  }
+}

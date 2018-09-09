@@ -54,7 +54,7 @@ class WorkPage extends BasePage {
             className="flex-h flex-vc flex-hc"
             key={project.id}>
             <img src={project.logo.url} />
-            <p>{project.description}</p>
+            <p>{project.name}</p>
           </div>
         </a>
       )

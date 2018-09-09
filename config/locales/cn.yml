@@ -38,6 +38,7 @@ zh-CN:
 
   activerecord:
     models:
+      product_show: '产品展示'
       creative_category: '创意类别'
       info: "我们"
       partner: "合作伙伴"
@@ -80,3 +81,13 @@ zh-CN:
         description: "工作内容"
         requirement: "期待"
         position: "位置"
+      product_show:
+        name: "名称"
+        position: "位置"
+        image1: "图标1"
+        image2: "图标2"
+        image3: "图标3"
+        image4: "图标4"
+        image5: "图标5"
+        image6: "图标6"
+        image7: "图标7"
