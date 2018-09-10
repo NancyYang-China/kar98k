@@ -4,7 +4,7 @@ class BannerUploader < CarrierWave::Uploader::Base
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
 
-  process resize_to_fit: [1435, 667]
+  process resize_to_fit: [1440, 450]
   # 1794 834
   # Choose what kind of storage to use for this uploader:
   storage :file

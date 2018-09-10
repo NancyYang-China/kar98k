@@ -5,7 +5,7 @@
     width: 100%;
     height: auto;
     min-width: 1200px;
-    min-height: 625px;
+    min-height: 450px;
     object-fit: cover;
   }
   .banner-image {
@@ -29,7 +29,7 @@
     height: 3px;
     cursor: pointer;
     margin-left: 6px;
-    margin-right: 6px; 
+    margin-right: 6px;
     border-color: #888;
     background-color: #888;
   }
@@ -61,5 +61,5 @@
     .carousel-indicators .active {
       width: 36px;
     }
-  } 
+  }
 }
