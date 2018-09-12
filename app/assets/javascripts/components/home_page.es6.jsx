@@ -6,7 +6,9 @@ class HomePage extends BasePage {
     const lisView = product_shows.map((show, index) => {
       return (
         <div className="show-item flex-v">
-          <p key={index}>{show.name}</p>
+          <a href={'/project?cate=' + (index+1)} target="_self">
+            <p key={index}>{show.name}</p>
+          </a>
          {this._renderImages(show, index)}
         </div>
       )
@@ -35,20 +37,33 @@ class HomePage extends BasePage {
     return (
       <div className="flex-h">
         <div className="flex-v" style={{marginRight: 10}}>
-          <img src={show.image1.url} style={{marginBottom: 10}}/>
-          <img src={show.image2.url}/>
+          <a href={'/project/1'} target="_self">
+            <img src={show.image1.url} style={{marginBottom: 10}}/>
+          </a>
+          <a href={'/project/2'} target="_self">
+            <img src={show.image2.url}/>
+          </a>
         </div>
-        <img src={show.image3.url} style={{marginRight: 10}}/>
+        <a href={'/project/3'} target="_self">
+          <img src={show.image3.url} style={{marginRight: 10}}/>
+        </a>
         <div className="flex-v" style={{marginRight: 10}}>
-          <img src={show.image4.url} style={{marginBottom: 10}}/>
-          <img src={show.image5.url}/>
+          <a href={'/project/4'} target="_self">
+            <img src={show.image4.url} style={{marginBottom: 10}}/>
+          </a>
+          <a href={'/project/5'} target="_self">
+            <img src={show.image5.url}/>
+          </a>
         </div>
-        <img src={show.image6.url}/>
+        <a href={'/project/6'} target="_self">
+          <img src={show.image6.url}/>
+        </a>
       </div>
     )
   }
 
   _renderImagesStyle2(show) {
+
     return (
       <div className="flex-h">
         <img src={show.image1.url} style={{marginRight: 10}}/>

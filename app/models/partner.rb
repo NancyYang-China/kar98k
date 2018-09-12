@@ -18,7 +18,7 @@ class Partner < ApplicationRecord
       field :name
       field :website do
         pretty_value do
-          if value.include?"http"
+          if value.include? 'http'
             %(<a href="#{value}">#{value}</a>).html_safe
           else
             value

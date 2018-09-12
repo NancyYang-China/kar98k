@@ -1,7 +1,6 @@
 class CreateProductShows < ActiveRecord::Migration[5.1]
   def change
     create_table :product_shows do |t|
-
       t.timestamps
       t.integer :position
 

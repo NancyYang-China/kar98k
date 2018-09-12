@@ -1,5 +1,4 @@
 class ProductShow < ApplicationRecord
-
   default_scope { order('position ASC') }
   mount_uploader :image1, ImageUploader
   mount_uploader :image2, ImageUploader
