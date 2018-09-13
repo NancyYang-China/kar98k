@@ -55,8 +55,8 @@
         }
         .asset {
           display: inline-block;
-          width: 396px;
-          height: 246px;
+          width: 520px;
+          height: auto;
           object-fit: cover;
         }
       }
@@ -243,7 +243,7 @@
             -moz-box-flex: none;         /* OLD - Firefox 19- */
             -webkit-flex: none;          /* Chrome */
             -ms-flex: none;              /* IE 10 */
-            flex: none;    
+            flex: none;
           }
           .asset {
             width: 100%;
