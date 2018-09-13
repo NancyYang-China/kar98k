@@ -9,7 +9,7 @@ class RecruitmentPage extends BasePage {
     const { recruitments } = this.props;
 
     const recruitmentViews = recruitments.map((recruitment, index)=> {
-      var email = recruitment.email || "canndy@tzdesign.com.cn"
+      var email = recruitment.email || "canny@tzdesign.com.cn"
       var divider = (recruitments.length - index > 1) ? <div className="horizontal-divider"/> : null
       return (
         <div className="recruitment-item" key={index}>

@@ -13,7 +13,7 @@ class ContactUsPage extends BasePage {
       children: (
         <div>
           <p className="bold-title">请发至</p>
-          <p>canndy@tzdesign.com.cn</p>
+          <p>canny@tzdesign.com.cn</p>
         </div>
       )
     }, {
@@ -23,7 +23,7 @@ class ContactUsPage extends BasePage {
       children: (
         <div>
           <p className="bold-title">职位申请请发至</p>
-          <p>canndy@tzdesign.com.cn</p>
+          <p>canny@tzdesign.com.cn</p>
           <div href="recruitment" className="widget flex-v flex-vc flex-asc">
             <span className="icon fa fa-plus"></span>
             <span className="text">点击了解更多职位详情</span>
@@ -45,7 +45,7 @@ class ContactUsPage extends BasePage {
           <p className="company-info">
             <b>上海田子企业形象策划有限公司</b><br/>
             021-34151199<br/>
-            canndy@tzdesign.com.cn<br/>
+            canny@tzdesign.com.cn<br/>
             上海市吴中路1189号<br/>
             德必易园(M8大楼)761室
           </p>
