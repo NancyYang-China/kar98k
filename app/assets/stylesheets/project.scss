@@ -4,6 +4,7 @@
   background: #f0f0f2;
   min-width: 1200px;
   height: auto;
+  padding-top: 60px;
   .project-menu {
     width: 100%;
     height: 130px;
@@ -26,129 +27,39 @@
     margin-bottom: 36px;
     width: 100%;
     .empty-item {
-      min-width: 280px;
-      min-height: 150px;
-      width: 20%;
-      height: 10.7vw;
+      position: relative;
+      min-width: 390px;
+      min-height: 260px;
+      width: 27%;
+      height: 18vw;
       margin: 5px;
     }
     #project-item {
-      min-width: 280px;
-      min-height: 150px;
-      width: 20%;
-      height: 10.7vw;
       position: relative;
-      background: #fff;
+      min-width: 390px;
+      min-height: 260px;
+      width: 27%;
+      height: 18vw;
       margin: 5px;
       cursor: pointer;
       img {
-        max-width: 180px;
-        max-height: 90px;
-        width: auto;
-        height: auto;
+        max-width: 390px;
+        max-height: 240px;
+        width: 100%;
+        height: 61.54vw;
         display: block;
+        border: 0px;
         object-fit: contain;
+        background: #fff;
       }
       p {
+        min-height: 20px;
         width: 100%;
-        position: absolute;
+        height: 5.13vw;
         left: 0px;
         bottom: 0px;
-        text-align: center;
         color: #757575;
       }
-    }
-  }
-  .modal {
-    display: block; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 4; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    // background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
-  }
-  /* Modal Content */
-  .modal-content {
-      background-color: #fff;
-      margin: auto;
-      padding: 20px;
-      border: 1px solid #888;
-      width: 700px;
-      height: auto;
-      position: relative;
-  }
-  /* The Close Button */
-  .close {
-      color: #aaaaaa;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-  }
-  .close:hover,
-  .close:focus {
-      color: #000;
-      text-decoration: none;
-      cursor: pointer;
-  }
-  .project-view {
-    width: 100%;
-    height: auto;
-    position: relative;
-    padding-left: 60px;
-    padding-right: 60px;
-    img {
-      max-width: 240px;
-      max-height: 120px;
-      margin-bottom: 20px;
-      width: auto;
-      height: auto;
-      display: inline-block;
-      object-fit: cover;
-    }
-    .title-bar {
-      width: 100%;
-      height: auto;
-      align-items: flex-end;
-      justify-content: space-between;
-      .title {
-        color: #101010;
-        font-size: 24px;
-        line-height: 35px;
-      }
-      .web-bar {
-        .pre-web {
-          color: #666666;
-          font-size: 11px;
-          line-height: 16px;
-          margin-right: 15px;
-        }
-        .website {
-          font-size: 13px;
-          line-height: 19px;
-          color: #101010;
-          margin-bottom: 10px;
-        }
-      }
-    }
-    .horizontal-divider {
-      width: 100%;
-      height: 1px;
-      background-color: #525e71;
-    }
-    .content {
-      width: 100%;
-      height: auto;
-      color: #5c5c5c;
-      font-size: 16px;
-      line-height: 36px;
-      margin-top: 42px;
-      margin-bottom: 80px;
-      font-style: thin;
     }
   }
 }
@@ -200,72 +111,6 @@
           line-height: 15px;
           bottom: -6px;
         }
-      }
-    }
-    /* Modal Content */
-    .modal-content {
-        width: 88%;
-        margin-bottom: 24px;
-    }
-    /* The Close Button */
-    .close {
-        color: #000;
-    }
-    .project-view {
-      padding-left: 20px;
-      padding-right: 20px;
-      img {
-        max-width: 60%;
-        max-height: 30vw;
-        margin-bottom: 12px;
-      }
-      .title-bar {
-        -webkit-align-items: center;
-        -moz-align-items: center;
-        -ms-align-items: center;
-        -o-align-items: center;
-        align-items: center;
-        flex-direction: column;
-        .title {
-          font-size: 10px;
-          line-height: 15px;
-          color: #666666;
-        }
-        .horizontal-divider-in {
-          width: 100%;
-          height: 1px;
-          margin-bottom: 12px;
-          background-color: #666;
-        }
-        .web-bar {
-          -webkit-flex-direction: column;
-          -moz-flex-direction: column;
-          -ms-flex-direction: column;
-          -o-flex-direction: column;
-          flex-direction: column;
-          .pre-web {
-            color: #666666;
-            font-size: 7px;
-            line-height: 10px;
-            margin-right: 0px;
-          }
-          .website {
-            font-size: 13px;
-            line-height: 19px;
-            color: #757575;
-            margin-bottom: 10px;
-          }
-        }
-      }
-      .horizontal-divider {
-        display: none;
-      }
-      .content {
-        font-size: 12px;
-        line-height: 17px;
-        color: #666;
-        margin-top: 16px;
-        margin-bottom: 24px;
       }
     }
   }

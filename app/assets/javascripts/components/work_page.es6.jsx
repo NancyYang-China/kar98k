@@ -51,7 +51,7 @@ class WorkPage extends BasePage {
       return (
         <a href={`/project/${project.id}`} key={index}>
           <div id="project-item"
-            className="flex-h flex-vc flex-hc"
+            className="flex-v flex-vc flex-hc"
             key={project.id}>
             <img src={project.logo.url} />
             <p>{project.name}</p>
@@ -60,7 +60,7 @@ class WorkPage extends BasePage {
       )
     })
 
-    var count = projectsView.length > 8 ? (4 - projectsView.length%4)%4 : 12 - projectsView.length
+    var count = projectsView.length > 6 ? (3 - projectsView.length%3)%3 : 9 - projectsView.length
     for(var i = 0; i < count; i++){
       projectsView.push(
         <div key={`others-${i}`} className="empty-item" />
@@ -74,42 +74,25 @@ class WorkPage extends BasePage {
     )
   }
 
-  _renderModal() {
-    const { project } = this.state;
-    if (!project) return null;
+  _renderBanner() {
+    const { filterType } = this.state;
+    const { creative_categories } = this.props
+
+    var tag = (filterType == -1) ? "ALL PROJECTS" : creative_categories[filterType-1].name
+    var src = (filterType == -1) ? "assets/images/project_badge.jpeg" : creative_categories[filterType-1].badge.url
+
     return (
-      <div id="projectModal" className="modal" style={{display: project ? "block" : "none"}}
-           onClick={()=> this.setState({project: null})}>
-        <div className="modal-content">
-          <span className="close">&times;</span>
-          <div className="project-view flex-v flex-vc">
-            <a className="flex-h flex-hc flex-vc" href={project.description} target="_blank">
-              <img src={project.logo.url}/>
-            </a>
-            <div className="title-bar flex-h">
-              <p className="title">{project.name}</p>
-              <div className="horizontal-divider-in" />
-              <div className="web-bar flex-h flex-vc">
-                <p className="pre-web">点击了解更多详情</p>
-                <a href={project.description} target="_blank" className="website">{project.description}</a>
-              </div>
-            </div>
-            <div className="horizontal-divider" />
-            <p className="content">{project.description}</p>
-          </div>
-        </div>
-      </div>
-    );
+      <ImageBanner tag={tag} src={src} />
+    )
   }
 
   _render() {
     return (
       <div className="project flex-v">
-        <ImageBanner tag="ALL PROJECTS" src="assets/images/project_badge.jpeg" />
+        {this._renderBanner()}
         {this._renderMenu()}
         {this._renderlist()}
       </div>
-      // {this._renderModal()}
     )
   }
 }

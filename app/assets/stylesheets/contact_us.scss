@@ -5,6 +5,7 @@
   min-width: 1200px;
   height: auto;
   position: relative;
+  padding-top: 60px;
   .full-width {
     width: 100%;
     height: auto;
@@ -106,7 +107,7 @@
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -ms-background-size: cover;
-      -o-background-size: cover; 
+      -o-background-size: cover;
     }
     .items {
       position: absolute;

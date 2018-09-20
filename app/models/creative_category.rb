@@ -13,18 +13,21 @@ class CreativeCategory < ApplicationRecord
   # has_many :investment
   default_scope { order('position ASC') }
 
+  mount_uploader :badge, BannerUploader
+
   rails_admin do
     nestable_list true
 
     edit do
       field :name
-      # field :investment
+      field :badge
     end
 
     list do
       sort_by :position
       field :position
       field :name
+      field :badge
       field :updated_at do
         label I18n.t('updated_at')
       end

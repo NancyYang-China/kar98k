@@ -1,4 +1,4 @@
-class AboutUsPage extends React.Component {
+class AboutUsPage extends BasePage {
 
   constructor(props) {
     super(props)
@@ -110,10 +110,13 @@ class AboutUsPage extends React.Component {
     );
   }
 
-  render() {
+  _path() {
+    return "/about_us"
+  }
+
+  _render() {
     return (
       <div className="about_us flex-v">
-        <HeaderBar path="/about_us"/>
         <ImageBanner tag="关于我们 About TZ" src="assets/images/about_us_badge.jpeg" />
         {this._renderMenu()}
         {this._renderContent()}
