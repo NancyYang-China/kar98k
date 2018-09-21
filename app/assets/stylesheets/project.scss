@@ -26,36 +26,38 @@
     margin-top: 5px;
     margin-bottom: 36px;
     width: 100%;
+    padding-left: 8vw;
+    padding-right: 8vw;
     .empty-item {
       position: relative;
       min-width: 390px;
       min-height: 260px;
-      width: 27%;
-      height: 18vw;
-      margin: 5px;
+      width: 24vw;
+      height: 16vw;
+      margin: 6px;
     }
     #project-item {
       position: relative;
       min-width: 390px;
       min-height: 260px;
-      width: 27%;
-      height: 18vw;
-      margin: 5px;
+      width: 24vw;
+      height: 16vw;
+      margin: 6px;
       cursor: pointer;
       img {
-        max-width: 390px;
-        max-height: 240px;
-        width: 100%;
-        height: 61.54vw;
+        min-width: 390px;
+        min-height: 240px;
+        width: 24vw;
+        height: 14.77vw;
         display: block;
-        border: 0px;
         object-fit: contain;
         background: #fff;
       }
       p {
+        min-width: 390px;
         min-height: 20px;
-        width: 100%;
-        height: 5.13vw;
+        width: 24vw;
+        height: 1.23vw;
         left: 0px;
         bottom: 0px;
         color: #757575;
@@ -82,34 +84,44 @@
       }
     }
     .list {
-      padding-left: 8px;
-      padding-right: 8px;
-      position: relative;
       margin-top: 3px;
       margin-bottom: 18px;
       width: 100%;
+      padding-left: 3vw;
+      padding-right: 3vw;
       .empty-item {
+        position: relative;
         min-width: 0px;
         min-height: 0px;
-        width: calc(50% - 14px);
+        width: 42vw;
         height: 28vw;
         margin: 3px;
       }
       #project-item {
         min-width: 0px;
         min-height: 0px;
-        width: calc(50% - 14px);
+        width: 42vw;
         height: 28vw;
         margin: 3px;
         img {
-          width: 80%;
-          height: 50vw;
+          min-width: 0px;
+          min-height: 0px;
+          width: 42vw;
+          height: 25.85vw;
           display: inline-block;
+          object-fit: contain;
+          background: #fff;
         }
         p {
+          min-width: 0px;
+          min-height: 0px;
           font-size: 10px;
           line-height: 15px;
-          bottom: -6px;
+          width: 42vw;
+          height: 2.15vw;
+          left: 0px;
+          bottom: 0px;
+          color: #757575;
         }
       }
     }
