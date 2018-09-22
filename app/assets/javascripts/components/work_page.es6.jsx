@@ -4,7 +4,7 @@ class WorkPage extends BasePage {
     super(props)
 
     this.state = {
-      filterType: this.props.cate || -1,
+      filterType: this.props.cate || 1,
       projects: null
     }
   }
@@ -28,10 +28,9 @@ class WorkPage extends BasePage {
 
   _renderMenu() {
     const { creative_categories } = this.props
-    const items = [{id: -1, name: "全部"}].concat(creative_categories).map(category=> {
-      return this._renderMenuItem({key: category.id, name: category.name})
+    const items = creative_categories.map(category=> {
+      return this._renderMenuItem({key: category.position, name: category.name})
     })
-    // items.splice(0, 0, this._renderMenuItem({key: -1, name: "全部"}))
     return (
       <div className="project-menu flex-h flex-hc flex-vc">
         {items}
@@ -40,13 +39,13 @@ class WorkPage extends BasePage {
   }
 
   _renderlist() {
-    const { projects } = this.props;
+    const { projects, creative_categories } = this.props;
     const { filterType } = this.state;
     if (!projects) return null;
 
     const projectsView = projects.filter(project=> {
-      return (filterType === -1) ? true :
-        project.creative_category_id == filterType
+      return (filterType === 1) ? true :
+        project.creative_category_id == creative_categories[filterType-1].id
     }).map((project, index)=> {
       return (
         <a href={`/project/${project.id}`} key={index}>
@@ -78,9 +77,8 @@ class WorkPage extends BasePage {
     const { filterType } = this.state;
     const { creative_categories } = this.props
 
-    var tag = (filterType == -1) ? "ALL PROJECTS" : creative_categories[filterType-1].name
-    var src = (filterType == -1) ? "assets/images/project_badge.jpeg" : creative_categories[filterType-1].badge.url
-
+    var tag = creative_categories[filterType-1].name
+    var src = creative_categories[filterType-1].badge.url
     return (
       <ImageBanner tag={tag} src={src} />
     )

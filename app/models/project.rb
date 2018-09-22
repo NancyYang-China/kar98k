@@ -9,6 +9,10 @@ class Project < ApplicationRecord
 
   belongs_to :creative_category
 
+  def category_position
+    creative_category.position
+  end
+
   rails_admin do
     nestable_list true
 
