@@ -115,7 +115,7 @@ class HomePage extends BasePage {
 
   _render() {
     return (
-      <div style={{paddingTop: 60}}>
+      <div className="flex-v flex-vc" style={{paddingTop: 60}}>
         <SlideBanner banners={this.props.banners}/>
         {this._renderList()}
       </div>

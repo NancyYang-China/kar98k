@@ -10,7 +10,7 @@
 #
 
 class CreativeCategory < ApplicationRecord
-  # has_many :investment
+  has_many :project
   default_scope { order('position ASC') }
 
   mount_uploader :badge, BannerUploader
