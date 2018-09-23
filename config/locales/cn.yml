@@ -84,6 +84,7 @@ zh-CN:
       product_show:
         name: "名称"
         position: "位置"
+        creative_category: "创意类别"
         image1: "图标1"
         image2: "图标2"
         image3: "图标3"

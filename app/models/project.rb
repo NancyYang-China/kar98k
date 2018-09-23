@@ -1,4 +1,7 @@
 class Project < ApplicationRecord
+
+  belongs_to :creative_category
+
   default_scope { order('position ASC') }
   mount_uploader :logo, LogoUploader
   mount_uploader :image1, ImageUploader
@@ -6,8 +9,6 @@ class Project < ApplicationRecord
   mount_uploader :image3, ImageUploader
   mount_uploader :image4, ImageUploader
   mount_uploader :image5, ImageUploader
-
-  belongs_to :creative_category
 
   rails_admin do
     nestable_list true

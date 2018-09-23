@@ -11,6 +11,7 @@
 
 class CreativeCategory < ApplicationRecord
   has_many :project
+  has_many :product_shows
   default_scope { order('position ASC') }
 
   mount_uploader :badge, BannerUploader

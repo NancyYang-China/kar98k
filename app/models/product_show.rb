@@ -1,4 +1,7 @@
 class ProductShow < ApplicationRecord
+
+  belongs_to :creative_category
+
   default_scope { order('position ASC') }
   mount_uploader :image1, ImageUploader
   mount_uploader :image2, ImageUploader
@@ -13,6 +16,7 @@ class ProductShow < ApplicationRecord
 
     edit do
       field :name
+      field :creative_category
       field :image1
       field :image2
       field :image3
@@ -26,6 +30,11 @@ class ProductShow < ApplicationRecord
       sort_by :position
       field :position
       field :name
+      field :creative_category do
+        pretty_value do # used in list view columns and show views, defaults to formatted_value for non-association fields
+          bindings[:object].creative_category.name
+        end
+      end
       field :updated_at do
         label I18n.t('updated_at')
       end
