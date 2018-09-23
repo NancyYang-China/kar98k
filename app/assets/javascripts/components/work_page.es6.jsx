@@ -29,7 +29,7 @@ class WorkPage extends BasePage {
   _renderMenu() {
     const { creative_categories } = this.props
     const items = creative_categories.map(category=> {
-      return this._renderMenuItem({key: category.position, name: category.name})
+      return this._renderMenuItem({key: category.id, name: category.name})
     })
     return (
       <div className="project-menu flex-h flex-hc flex-vc">
@@ -45,7 +45,7 @@ class WorkPage extends BasePage {
 
     const projectsView = projects.filter(project=> {
       return (filterType === 1) ? true :
-        project.creative_category_id == creative_categories[filterType-1].id
+        project.creative_category_id == filterType
     }).map((project, index)=> {
       return (
         <a href={`/project/${project.id}`} key={index}>
@@ -76,6 +76,8 @@ class WorkPage extends BasePage {
   _renderBanner() {
     const { filterType } = this.state;
     const { creative_categories } = this.props
+
+    var category = creative_categories.filter(cate => filterType == cate.id).last
 
     var tag = creative_categories[filterType-1].name
     var src = creative_categories[filterType-1].badge.url

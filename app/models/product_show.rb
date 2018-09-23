@@ -1,5 +1,4 @@
 class ProductShow < ApplicationRecord
-
   belongs_to :creative_category
 
   default_scope { order('position ASC') }
