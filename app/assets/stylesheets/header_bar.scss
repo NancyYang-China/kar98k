@@ -36,7 +36,7 @@
   .nav-logo {
     margin-left: 30px;
     width: auto;
-    height: 30px;
+    height: 38px;
     justify-content: flex-start;
     -webkit-justify-content: flex-start;
     -ms-justify-content: flex-start;
@@ -49,9 +49,10 @@
     display: -ms-flex;
     -ms-justify-content: flex-end;
     margin-right: 60px;
+    margin-bottom: -10px;
   }
   .menu-item {
-    font-size: 16px;
+    font-size: 25px;
     color: #000;
     font-style: normal;
     margin: 16px;
