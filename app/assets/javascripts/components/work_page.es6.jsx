@@ -3,9 +3,12 @@ class WorkPage extends BasePage {
   constructor(props) {
     super(props)
 
+    var allCategory = this.props.creative_categories.filter(cate => "全部" === cate.name).pop()
+
     this.state = {
       filterType: this.props.cate || 1,
-      projects: null
+      projects: null,
+      allId: allCategory === undefined ? allCategory.id : 5
     }
   }
 
@@ -40,11 +43,11 @@ class WorkPage extends BasePage {
 
   _renderlist() {
     const { projects, creative_categories } = this.props;
-    const { filterType } = this.state;
+    const { filterType, allId } = this.state;
     if (!projects) return null;
 
     const projectsView = projects.filter(project=> {
-      return (filterType === 1) ? true :
+      return (filterType == allId) ? true :
         project.creative_category_id == filterType
     }).map((project, index)=> {
       return (
@@ -77,10 +80,10 @@ class WorkPage extends BasePage {
     const { filterType } = this.state;
     const { creative_categories } = this.props
 
-    var category = creative_categories.filter(cate => filterType == cate.id).last
+    var category = creative_categories.filter(cate => filterType == cate.id).pop()
 
-    var tag = creative_categories[filterType-1].name
-    var src = creative_categories[filterType-1].badge.url
+    var tag = category === undefined ? "" : category.name
+    var src = category === undefined ? "" : category.badge.url
     return (
       <ImageBanner tag={tag} src={src} />
     )
