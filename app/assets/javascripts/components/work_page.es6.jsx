@@ -4,11 +4,12 @@ class WorkPage extends BasePage {
     super(props)
 
     var allCategory = this.props.creative_categories.filter(cate => "全部" === cate.name).pop()
+    var id = allCategory === undefined ? allCategory.id : 5
 
     this.state = {
-      filterType: this.props.cate || 1,
+      filterType: this.props.cate || id,
       projects: null,
-      allId: allCategory === undefined ? allCategory.id : 5
+      allId: id
     }
   }
 

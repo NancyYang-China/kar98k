@@ -50,7 +50,7 @@
         width: 24vw;
         height: 14.77vw;
         display: block;
-        object-fit: contain;
+        object-fit: cover;
         background: #fff;
       }
       p {
@@ -59,7 +59,7 @@
         width: 24vw;
         height: 1.23vw;
         left: 0px;
-        bottom: 0px;
+        bottom: -3px;
         color: #757575;
       }
     }
