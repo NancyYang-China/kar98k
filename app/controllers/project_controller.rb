@@ -8,6 +8,8 @@ class ProjectController < ApplicationController
   end
 
   def show
-    render component: 'ProjectShowPage', props: { project: Project.find(params[:id]) }
+    project = Project.find(params[:id])
+
+    render component: 'ProjectShowPage', props: { project: project.as_json.merge(category: project.creative_category.name) }
   end
 end

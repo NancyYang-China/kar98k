@@ -21,14 +21,14 @@ class ProjectShowPage extends BasePage {
   }
 
   _render() {
-    const { name, description } = this.props.project;
+    const { name, description, category } = this.props.project;
 
     return (
       <div className="project-show flex-v">
         <div className="header flex-h">
           <div className="header-left flex-v">
             <p className="project-name">{name}</p>
-            <p className="project-type">设计类别-包装</p>
+            <p className="project-type">{`设计类别-${category}`}</p>
           </div>
           <p className="header-right">
             {description}
