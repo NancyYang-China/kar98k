@@ -39,7 +39,10 @@
   .images-container {
     width: 100%;
     height: auto;
-    padding: 122px;
+    .top-image {
+      width: 1196px;
+      height: 620px;
+    }
     .image-left {
       margin-right: 10px;
       margin-top: 20px;

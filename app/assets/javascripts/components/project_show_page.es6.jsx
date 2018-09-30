@@ -4,7 +4,7 @@ class ProjectShowPage extends BasePage {
     const { project } = this.props;
 
     return (
-      <div className="images-container flex-v">
+      <div className="images-container flex-v flex-vc">
         <img className="top-image" src={project.image1.url}/>
         <div className="flex-h">
           <div className="image-v flex-v">
