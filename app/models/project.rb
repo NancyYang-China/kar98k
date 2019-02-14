@@ -8,6 +8,10 @@ class Project < ApplicationRecord
   mount_uploader :image3, ImageUploader
   mount_uploader :image4, ImageUploader
   mount_uploader :image5, ImageUploader
+  mount_uploader :image6, ImageUploader
+  mount_uploader :image7, ImageUploader
+  mount_uploader :image8, ImageUploader
+  mount_uploader :image9, ImageUploader
 
   rails_admin do
     nestable_list true
@@ -33,6 +37,10 @@ class Project < ApplicationRecord
       field :image3
       field :image4
       field :image5
+      field :image6
+      field :image7
+      field :image8
+      field :image9
     end
 
     list do
