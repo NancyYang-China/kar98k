@@ -1,4 +1,8 @@
-class ContactUsPage extends BasePage {
+import React from 'react'
+import BasePage from './base_page'
+import ContactItem from './contact_item'
+
+export default class ContactUsPage extends BasePage {
   constructor(props) {
     super(props)
 

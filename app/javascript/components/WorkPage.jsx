@@ -1,4 +1,8 @@
-class WorkPage extends BasePage {
+import React from 'react'
+import BasePage from './base_page'
+import ImageBanner from './image_banner'
+
+export default class WorkPage extends BasePage {
 
   constructor(props) {
     super(props)

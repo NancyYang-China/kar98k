@@ -1,4 +1,7 @@
-class ProjectShowPage extends BasePage {
+import React from 'react'
+import BasePage from './base_page'
+
+export default class ProjectShowPage extends BasePage {
 
   _renderImages() {
     const { project } = this.props;

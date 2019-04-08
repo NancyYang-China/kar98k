@@ -1,4 +1,6 @@
-class SlideBanner extends React.Component {
+import React from 'react'
+
+export default class SlideBanner extends React.Component {
 
   _renderBanner(banner, index) {
     const className = index === 0 ? "item active" : "item"
