@@ -1,3 +1,6 @@
+import React from 'react'
+import BasePage from './base_page'
+
 class RecruitmentPage extends BasePage {
 
   constructor(props) {

@@ -1,4 +1,6 @@
-class ContactItem extends React.Component {
+import React from 'react'
+
+export default class ContactItem extends React.Component {
 
   render() {
     const { name, icon, active, children, onMouseOver, href } = this.props;

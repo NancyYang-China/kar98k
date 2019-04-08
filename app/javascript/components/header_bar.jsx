@@ -1,4 +1,6 @@
-class HeaderBar extends React.Component {
+import React from 'react'
+
+export default class HeaderBar extends React.Component {
   constructor(props) {
     super(props)
     this.state = {

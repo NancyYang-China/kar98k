@@ -1,4 +1,6 @@
-class ImageBanner extends React.Component {
+import React from 'react'
+
+export default class ImageBanner extends React.Component {
 
   render() {
     const { tag, src, children } = this.props;
