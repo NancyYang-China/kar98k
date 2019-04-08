@@ -26,7 +26,7 @@ gem 'coffee-rails', '~> 4.2'
 # let your Gemfile do the configuring (http://github.com/indirect/haml-rails)
 gem 'haml-rails'
 # Integrate React.js with Rails views and controllers, the asset pipeline, or webpacker.
-# gem 'webpacker'
+gem 'webpacker', '~> 3.4'
 gem 'react-rails'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
