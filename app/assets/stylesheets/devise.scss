@@ -14,14 +14,15 @@
  *= require_self
  */
 
-@import "flex";
-@import "about_us";
-@import "header_bar";
-@import "footer";
-@import "home";
-@import "contact_us";
-@import "image_banner";
-@import "project";
-@import "slider_banner";
-@import "recruitment";
-@import "project_show";
+/* "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables" */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+@import "bootstrap";
+@import "devise_bootstrap_views";
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Pingfang SC", "Microsoft Yahei", sans-serif;
+};
