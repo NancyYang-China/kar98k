@@ -1,4 +1,7 @@
-class BasePage extends React.Component {
+import React from 'react'
+import HeaderBar from './header_bar'
+
+export default class BasePage extends React.Component {
 
   _render() { return null }
 

@@ -1,4 +1,8 @@
-class HomePage extends BasePage {
+import React from 'react'
+import BasePage from './base_page'
+import SlideBanner from './slide_banner'
+
+export default class HomePage extends BasePage {
 
   _renderList() {
     const { product_shows } = this.props;

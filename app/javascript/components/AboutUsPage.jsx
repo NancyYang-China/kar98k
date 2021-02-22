@@ -1,4 +1,8 @@
-class AboutUsPage extends BasePage {
+import React from 'react'
+import BasePage from './base_page'
+import ImageBanner from './image_banner'
+
+export default class AboutUsPage extends BasePage {
 
   constructor(props) {
     super(props)

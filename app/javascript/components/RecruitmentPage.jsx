@@ -1,4 +1,7 @@
-class RecruitmentPage extends BasePage {
+import React from 'react'
+import BasePage from './base_page'
+
+export default class RecruitmentPage extends BasePage {
 
   constructor(props) {
     super(props)
