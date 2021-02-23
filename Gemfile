@@ -12,9 +12,9 @@ gem 'rails', '~> 5.1.6'
 # Use postgreSQL  as the database for Active Record
 gem 'pg'
 # Use Puma as the app server
-gem 'puma', '~> 3.7'
+gem 'puma', '~> 3.12'
 # Use SCSS for stylesheets
-gem 'bootstrap-sass', '~> 3.4.1'
+gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -47,14 +47,14 @@ gem 'rails-i18n'
 
 # Flexible authentication solution for Rails with Warden
 gem 'devise'
-gem 'devise-bootstrap-views'
+# gem 'devise-bootstrap-views'
 gem 'devise-i18n'
 
 # RailsAdmin is a Rails engine that provides an easy-to-use interface for managing your data
-gem 'rails_admin', '~> 1.2'
+gem 'rails_admin', '~> 1.4'
 
 # Classier solution for file uploads for Rails, Sinatra and other Ruby web frameworks
-gem 'carrierwave', '~> 1.0'
+gem 'carrierwave', '~> 1.3'
 gem 'mini_magick'
 
 # Automatic Ruby code style checking tool. (http://github.com/bbatsov/rubocop)
@@ -63,7 +63,7 @@ gem 'rubocop', require: false
 gem 'font-awesome-sass'
 
 # CKEditor is a WYSIWYG text editor designed to simplify web content creation
-gem 'ckeditor'
+# gem 'ckeditor'
 gem 'rails_admin_nestable', '~> 0.3.2'
 
 group :development, :test do
