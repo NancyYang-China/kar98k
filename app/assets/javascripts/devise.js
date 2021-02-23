@@ -12,4 +12,3 @@
 //
 //= require turbolinks
 //= require bootstrap-sprockets
-//= require ckeditor/init
