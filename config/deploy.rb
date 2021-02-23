@@ -1,5 +1,5 @@
 # config valid for current version and patch releases of Capistrano
-lock '~> 3.10.2'
+lock '~> 3.15.0'
 
 set :application, 'tz'
 set :repo_url, 'git@github.com:NancyYang-China/kar98k.git'
@@ -8,11 +8,13 @@ set :repo_url, 'git@github.com:NancyYang-China/kar98k.git'
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, '/home/deploy/tz'
+set :deploy_to, "/home/deploy/#{fetch :application}"
 
 append :linked_files, 'config/database.yml', 'config/secrets.yml'
 append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads'
 
+# Only keep the last 5 releases to save disk space
+set :keep_releases, 5
 
 before "deploy:assets:precompile", "deploy:yarn_install"
 
